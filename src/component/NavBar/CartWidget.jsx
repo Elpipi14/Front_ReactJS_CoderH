@@ -4,7 +4,7 @@ import { CartContext } from "../../Context/cartContext";
 import cart from '../../assets/products/cart.svg';
 import Cart from "./Cart";
 
-export const CartWidget = () => {
+export const CartWidget = ({ onClose }) => {
     const { getTotalQuantity } = useContext(CartContext);
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);

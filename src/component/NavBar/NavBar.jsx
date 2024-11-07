@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo/variete.svg";
 import { CartWidget } from "./CartWidget.jsx";
 import subLogo from "../../assets/logo/Lv.png";
@@ -9,15 +9,11 @@ import SessionUser from "../Users/SessionUser.jsx";
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [session, setSession] = useState(false);
-  const location = useLocation(); // Detecta la ubicación actual
 
   const toggleMenu = () => setIsMenuOpen((prevState) => !prevState);
+  const closeMenu = () => setIsMenuOpen(false);
   const toggleSession = () => setSession(true);
-
-  // Cierra el menú cuando la ubicación cambia
-  useEffect(() => {
-    setIsMenuOpen(false); // Cierra el menú
-  }, [location]); // Se ejecuta cada vez que cambia la ubicación
+  
 
   return (
     <div className="bg-gray-900 w-full">
@@ -41,7 +37,6 @@ const NavBar = () => {
                 </li>
               </ul>
             </li>
-
             <li className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">
               <Link to="/contacto">contacto</Link>
             </li>
@@ -118,18 +113,21 @@ const NavBar = () => {
                   <nav>
                     <ul className="space-y-4 flex flex-col text-center">
                       <li className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">
-                        <Link to="/nosotros">Nosotros</Link>
+                        <Link to="/nosotros" onClick={closeMenu}>Nosotros</Link>
                       </li>
                       <li className="p-3 font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">
-                        <Link to="/productos">Productos</Link>
+                        <Link to="/productos" onClick={closeMenu}>Productos</Link>
                       </li>
                       <li className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">
-                        <Link to="/contacto"> contacto</Link>
+                        <Link to="/contacto" onClick={closeMenu}>contacto</Link>
                       </li>
                       <li>
                         <button
                           className="mb-4 font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                          onClick={toggleSession}
+                          onClick={() => {
+                            toggleSession();
+                            closeMenu();
+                          }}
                         >
                           Iniciar Sesion
                         </button>
@@ -138,7 +136,7 @@ const NavBar = () => {
                         )}
                       </li>
                       <li>
-                        <CartWidget />
+                        <CartWidget  />
                       </li>
                     </ul>
                   </nav>
