@@ -65,13 +65,41 @@ const CartProvider = ({ children }) => {
   //   Elimina producto agregado en el carrito
   const removeProduct = (itemId) => {
     const cartDeleteProduct = cart.filter((product) => product.id !== itemId);
-    setCart(cartDeleteProduct);
+    if (cart.some((product) => product.id === itemId)) {
+      setCart(cartDeleteProduct);
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Producto eliminado del carrito",
+        showConfirmButton: false,
+        timer: 1000,
+      });
+    }
   };
 
   //   Limpia el Carrito
   const clearCart = () => {
-    setCart([]);
+    cart.length === 0
+      ? Swal.fire("El Carrito Está Vacío, Agregue Productos")
+      : Swal.fire({
+          title: "¿Estás seguro de vaciar el carrito?",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Sí, vaciar"
+        }).then((result) => {
+          if (result.isConfirmed) {
+            setCart([]);
+            Swal.fire({
+              title: "Vaciado!",
+              text: "El carrito ha sido vaciado.",
+              icon: "success"
+            });
+          }
+        });
   };
+  
 
   //   Suma el total del los productos agregados
   const getTotal = () => {
