@@ -10,26 +10,6 @@ const CheckOut = () => {
       <div className="grid lg:grid-cols-3 gap-10">
         <div className="lg:col-span-2 max-lg:order-1">
           <div className="mt-16 max-w-lg">
-              <h2 className="text-2xl font-extrabold text-gray-800">
-                Métodos de Pago
-              </h2>
-            <div className="grid gap-4 sm:grid-cols-2 mt-8">
-              <div className="flex items-center">
-                <div className="ml-4 flex gap-2">
-                  <img
-                    src="https://readymadeui.com/images/visa.webp"
-                    className="w-12"
-                    alt="card1"
-                  />
-                  {/* <img src="https://readymadeui.com/images/american-express.webp" className="w-12" alt="card2" /> */}
-                  <img
-                    src="https://img.icons8.com/?size=100&id=nTLVtpxsNPaz&format=png&color=000000"
-                    className="w-12"
-                    alt="mercadoPago"
-                  />
-                </div>
-              </div>
-            </div>
             <FormCheck />
         </div>
       </div>
