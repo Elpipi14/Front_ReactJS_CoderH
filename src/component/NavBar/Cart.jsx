@@ -102,7 +102,7 @@ const Cart = ({ closeMenu, closeNavBar }) => {
         <Link to="/productos">
           <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
             <button
-              type="button"
+              onClick={finalizarCompra}
               className="font-medium text-custom-gree-2 hover:text-indigo-600"
             >
               Continuar Comprando
