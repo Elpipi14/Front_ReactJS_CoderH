@@ -2,9 +2,9 @@ import { useContext, useState } from "react";
 import { CartContext } from "../../Context/cartContext";
 import { Link } from "react-router-dom";
 
-const Cart = () => {
+const Cart = ({closeMenu}) => {
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false); 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const {
     cart,
@@ -86,6 +86,7 @@ const Cart = () => {
         <Link to="/carrito/checkout">
           <div className="flex flex-col mt-6">
             <button
+            onClick={closeMenu}
               className="text-center rounded-md border border-transparent bg-custom-gree-2 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-600"
             >
               Finalizar Compra

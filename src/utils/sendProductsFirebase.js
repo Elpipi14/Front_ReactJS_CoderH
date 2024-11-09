@@ -16,7 +16,7 @@ const products = [
     },
     {
       "id": 2,
-      "name": "https://ibb.co/tQ4N7yZ",
+      "name": "Milanesa de Pollo con Ensalada",
       "description": "Milanesa de pollo crujiente con una fresca ensalada de lechuga, tomate y cebolla.",
       "price": 300,
       "stock": 18,
