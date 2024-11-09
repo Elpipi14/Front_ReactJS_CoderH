@@ -136,7 +136,7 @@ const NavBar = () => {
                         )}
                       </li>
                       <li>
-                        <CartWidget  />
+                        <CartWidget closeNavBar={closeMenu}  />
                       </li>
                     </ul>
                   </nav>

@@ -3,7 +3,7 @@ import { CartContext } from "../../Context/cartContext";
 import cart from '../../assets/products/cart.svg';
 import Cart from "./Cart";
 
-export const CartWidget = () => {
+export const CartWidget = ({ closeNavBar }) => {
     const { getTotalQuantity } = useContext(CartContext);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -44,7 +44,7 @@ export const CartWidget = () => {
                             X
                         </button>
                     </div>
-                    <Cart closeMenu={closeMenu} />
+                    <Cart closeMenu={closeMenu} closeNavBar={closeNavBar} />
                 </div>
             )}
         </div>
