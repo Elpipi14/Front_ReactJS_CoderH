@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
-// "AIzaSyCt8viyRCZgwx_mbOXQLVzSv80JMlkFhFw"
+
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_API_KEY,
   authDomain: "ecommerce-60060-163c7.firebaseapp.com",

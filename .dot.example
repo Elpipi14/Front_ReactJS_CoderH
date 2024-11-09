@@ -1,0 +1,7 @@
+# API_KEY_LOADPRODUCTS es utilizada en el entorno de Node.js para cargar productos en Firebase.
+# Se accede a esta clave desde Node.js utilizando process.env.API_KEY_LOADPRODUCTS.
+VITE_API_KEY= 
+
+# API_KEY_LOADPRODUCTS es utilizada en el entorno de Node.js para cargar productos en Firebase.
+# Se accede a esta clave desde Node.js utilizando process.env.API_KEY_LOADPRODUCTS.
+API_KEY_LOADPRODUCTS=

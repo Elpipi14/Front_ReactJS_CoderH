@@ -201,10 +201,10 @@ const products = [
   }
 ]
 
-export const getProducts = () =>{
-  return new Promise ((res, rej)=>{
-     setTimeout(()=>{
-      res(products)
-     }, 2000)
-  })
-}
+// export const getProducts = () =>{
+//   return new Promise ((res, rej)=>{
+//      setTimeout(()=>{
+//       res(products)
+//      }, 2000)
+//   })
+// }
