@@ -59,7 +59,7 @@ const NavBar = () => {
               {session && <SessionUser onClose={() => setSession(false)} />}
             </li>
             <li>
-              <CartWidget />
+              <CartWidget closeNavBar={closeMenu}  />
             </li>
           </ul>
 

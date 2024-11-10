@@ -10,7 +10,7 @@ const CheckOut = () => {
       <div className="grid lg:grid-cols-3 gap-10">
         <div className="lg:col-span-2 max-lg:order-1">
           <div className="mt-16 max-w-lg">
-            <FormCheck cart={cart}/>
+          <FormCheck cart={cart} getTotal={getTotal}/>
         </div>
       </div>
 
