@@ -3,7 +3,6 @@ import { CartContext } from "../../Context/cartContext";
 import { Link } from "react-router-dom";
 
 const Cart = ({ closeMenu, closeNavBar }) => {
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const {
@@ -34,7 +33,9 @@ const Cart = ({ closeMenu, closeNavBar }) => {
               />
               <div className="flex justify-center text-base font-medium text-gray-900">
                 <h3>{productCart.name}</h3>
-                <p className="ml-4">${productCart.price * productCart.quantity}</p>
+                <p className="ml-4">
+                  ${productCart.price * productCart.quantity}
+                </p>
               </div>
               <p className="mt-1 text-sm text-center text-gray-500"></p>
             </div>
@@ -88,18 +89,28 @@ const Cart = ({ closeMenu, closeNavBar }) => {
             Vaciar Carrito
           </button>
         </div>
-        <Link 
-        onClick={() => window.scrollTo(0, 0)}
-        to="/carrito/checkout">
+
+        {cart.length > 0 ? (
+          <Link onClick={() => window.scrollTo(0, 0)} to="/carrito/checkout">
+            <div className="flex flex-col mt-6">
+              <button
+                onClick={finishPurchase}
+                className="text-center rounded-md border border-transparent bg-custom-gree-2 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-600"
+              >
+                Finalizar Compra
+              </button>
+            </div>
+          </Link>
+        ) : (
           <div className="flex flex-col mt-6">
             <button
-            onClick={finishPurchase}
-              className="text-center rounded-md border border-transparent bg-custom-gree-2 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-600"
+              className="text-center rounded-md border border-transparent bg-gray-400 px-6 py-3 text-base font-medium text-white shadow-sm cursor-not-allowed"
+              disabled
             >
               Finalizar Compra
             </button>
           </div>
-        </Link>
+        )}
 
         <Link to="/productos">
           <div className="mt-6 flex justify-center text-center text-sm text-gray-500">

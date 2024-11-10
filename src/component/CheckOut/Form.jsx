@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { Timestamp, addDoc, collection } from "firebase/firestore";
 import db from "../../Service/FireBaseDB";
 
 import FormBuyer from "./FormBuyer";
+import OrderBuyer from "./BuyerForm/OrderBuyer";
 
 const FormCheck = ({ cart, getTotal, removeCart }) => {
   const [dataForm, setDataForm] = useState({
@@ -61,27 +61,7 @@ const FormCheck = ({ cart, getTotal, removeCart }) => {
           handleSubmitForm={handleSubmitForm}
         />
       ) : (
-        <div class="flex flex-col items-center max-w-md  m-auto bg-white rounded-lg shadow-2xl p-6 text-center mb-10">
-          <div class="card-body">
-            <h1 class="text-2xl font-bold text-green-600 mb-4">
-              ¡Orden creada con éxito! 🎉
-            </h1>
-            <h2 class="text-lg font-semibold text-gray-800 mb-2">
-            📋 Número de orden: {idOrder} 
-            </h2>
-            <h3 class="text-gray-600 mb-6">
-              Guarde su número de orden para seguimiento...
-            </h3>
-            <div class="flex justify-center">
-              <Link
-                to="/"
-                class="min-w-[150px] font-semibold px-6 py-3 text-white bg-custom-gree-2 rounded-full shadow-md hover:bg-green-400 transition duration-300"
-              >
-               ⬅️ Volver a inicio
-              </Link>
-            </div>
-          </div>
-        </div>
+        <OrderBuyer idOrder={idOrder} />
       )}
     </div>
   );
