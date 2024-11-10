@@ -16,7 +16,7 @@ const Cart = ({ closeMenu, closeNavBar }) => {
     decreaseQuantity,
   } = useContext(CartContext);
 
-  const finalizarCompra = () => {
+  const finishPurchase = () => {
     closeMenu();
     closeNavBar();
   };
@@ -88,10 +88,12 @@ const Cart = ({ closeMenu, closeNavBar }) => {
             Vaciar Carrito
           </button>
         </div>
-        <Link to="/carrito/checkout">
+        <Link 
+        onClick={() => window.scrollTo(0, 0)}
+        to="/carrito/checkout">
           <div className="flex flex-col mt-6">
             <button
-            onClick={finalizarCompra}
+            onClick={finishPurchase}
               className="text-center rounded-md border border-transparent bg-custom-gree-2 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-600"
             >
               Finalizar Compra
@@ -102,7 +104,7 @@ const Cart = ({ closeMenu, closeNavBar }) => {
         <Link to="/productos">
           <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
             <button
-              onClick={finalizarCompra}
+              onClick={finishPurchase}
               className="font-medium text-custom-gree-2 hover:text-indigo-600"
             >
               Continuar Comprando

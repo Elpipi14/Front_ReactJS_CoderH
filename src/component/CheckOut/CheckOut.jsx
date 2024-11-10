@@ -10,7 +10,7 @@ const CheckOut = () => {
       <div className="grid lg:grid-cols-3 gap-10">
         <div className="lg:col-span-2 max-lg:order-1">
           <div className="mt-16 max-w-lg">
-            <FormCheck />
+            <FormCheck cart={cart}/>
         </div>
       </div>
 
@@ -20,7 +20,7 @@ const CheckOut = () => {
         </h2>
         {cart && cart.length > 0 ? (
           cart.map((productCart) => (
-            <ul className="text-gray-800 mt-8 space-y-4">
+            <ul className="text-gray-800 mt-8 space-y-4" key={productCart.id}>
               <li className="flex flex-wrap p-auto text-sm">
                 <img
                   src={productCart.image}

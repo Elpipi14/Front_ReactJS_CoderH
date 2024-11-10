@@ -14,6 +14,7 @@ const Payment = () => {
       <input
         type="text"
         placeholder="Titular de la Tarjeta"
+        name="fullname"
         className="px-4 py-3.5 bg-white text-gray-800 w-full text-sm border-b-2 focus:border-gray-800 outline-none"
       />
 
@@ -22,6 +23,7 @@ const Payment = () => {
         <input
           type="number"
           placeholder="Numero de la Tarjeta"
+          name="numbercard"
           className="px-4 py-3.5 bg-white text-gray-800 w-full text-sm outline-none"
         />
       </div>
@@ -30,6 +32,7 @@ const Payment = () => {
         <input
           type="number"
           placeholder="EXP."
+          name="vto"
           className="px-4 py-3.5 bg-white text-gray-800 w-full text-sm border-b-2 focus:border-gray-800 outline-none"
         />
         <input
@@ -46,7 +49,7 @@ const Payment = () => {
           type="checkbox"
           className="h-4 w-4 shrink-0 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
         />
-        <label htmlFor="form" className="ml-3 block text-sm">
+        <label className="ml-3 block text-sm">
           Acepto
           <button
             onClick={(e) => {
@@ -61,51 +64,51 @@ const Payment = () => {
         {/* Muestra el componente de Términos y Condiciones cuando terms es true */}
         {terms && <TermsAndConditions onClose={() => setTerms(false)} />}
       </div>
-      
+
       <div className="flex flex-col items-center sm:flex-row sm:flex-wrap gap-4 mt-8">
-          <Link to="/">
-            <button
-              type="button"
-              className="min-w-[150px] px-6 py-3.5 text-sm bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200"
-            >
-              Cancelar Compra
-            </button>
-          </Link>
+        <Link to="/">
           <button
             type="button"
-            className="min-w-[150px] px-6 py-3.5 text-sm bg-gray-800 text-white rounded-md hover:bg-[#111]"
+            className="min-w-[150px] px-6 py-3.5 text-sm bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200"
           >
-            Pagar
+            Cancelar Compra
           </button>
-          <button
-            type="button"
-            className="min-w-[150px] px-6 py-3.5 text-sm bg-gray-800 text-white rounded-md hover:bg-[#111]"
-          >
-            Ir a MercadoPago
-          </button>
-        </div>
-        <div className="flex items-center mt-3 ">
+        </Link>
+        <button
+          type="submit"
+          className="min-w-[150px] px-6 py-3.5 text-sm bg-gray-800 text-white rounded-md hover:bg-[#111]"
+        >
+          Pagar
+        </button>
+        <button
+          type="button"
+          className="min-w-[150px] px-6 py-3.5 text-sm bg-gray-800 text-white rounded-md hover:bg-[#111]"
+        >
+          Ir a MercadoPago
+        </button>
+      </div>
+      <div className="flex items-center mt-3 ">
         <h2 className="text-xl font-extrabold text-gray-800">
-                Métodos de Pago
+          Métodos de Pago
         </h2>
-            <div className="grid gap-4 sm:grid-cols-2 mt-2">
-              <div className="flex items-center">
-                <div className="ml-4 flex gap-2">
-                  <img
-                    src="https://readymadeui.com/images/visa.webp"
-                    className="w-12"
-                    alt="card1"
-                  />
-                  {/* <img src="https://readymadeui.com/images/american-express.webp" className="w-12" alt="card2" /> */}
-                  <img
-                    src="https://img.icons8.com/?size=100&id=nTLVtpxsNPaz&format=png&color=000000"
-                    className="w-12"
-                    alt="mercadoPago"
-                  />
-                </div>
-              </div>
+        <div className="grid gap-4 sm:grid-cols-2 mt-2">
+          <div className="flex items-center">
+            <div className="ml-4 flex gap-2">
+              <img
+                src="https://readymadeui.com/images/visa.webp"
+                className="w-12"
+                alt="card1"
+              />
+              {/* <img src="https://readymadeui.com/images/american-express.webp" className="w-12" alt="card2" /> */}
+              <img
+                src="https://img.icons8.com/?size=100&id=nTLVtpxsNPaz&format=png&color=000000"
+                className="w-12"
+                alt="mercadoPago"
+              />
             </div>
           </div>
+        </div>
+      </div>
     </div>
   );
 };
