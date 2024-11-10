@@ -99,6 +99,10 @@ const CartProvider = ({ children }) => {
           }
         });
   };
+
+  const removeCart = () =>{
+    setCart([]);
+  }
   
 
   //   Suma el total del los productos agregados
@@ -121,6 +125,7 @@ const CartProvider = ({ children }) => {
         clearCart,
         increaseQuantity,
         decreaseQuantity,
+        removeCart
       }}
     >
       {children}

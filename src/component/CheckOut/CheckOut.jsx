@@ -3,14 +3,14 @@ import { CartContext } from "../../Context/cartContext";
 import FormCheck from "./Form";
 
 const CheckOut = () => {
-  const { cart, getTotal } = useContext(CartContext);
+  const { cart, getTotal, removeCart } = useContext(CartContext);
 
   return (
     <div className="font-[sans-serif] bg-white p-4 lg:max-w-7xl max-w-xl mx-auto">
       <div className="grid lg:grid-cols-3 gap-10">
         <div className="lg:col-span-2 max-lg:order-1">
           <div className="mt-16 max-w-lg">
-            <FormCheck cart={cart} getTotal={getTotal} />
+            <FormCheck cart={cart} getTotal={getTotal} removeCart={removeCart} />
           </div>
         </div>
         <div className="bg-gray-100 p-1 rounded-md">
