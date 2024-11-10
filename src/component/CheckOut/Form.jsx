@@ -17,7 +17,8 @@ const FormCheck = ({ cart, getTotal }) => {
   });
 
   const cartItems = cart.map((product) => {
-    return product;
+    const { name, price, quantity } = product;
+    return { name, price, quantity };
   });
 
   const handleInputChange = (event) => {
