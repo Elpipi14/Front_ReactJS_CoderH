@@ -1,6 +1,7 @@
 const ShippingBuyer = ({ dataForm, handleInputChange }) => {
   return (
     <>
+
       <h2 className="text-2xl text-center font-extrabold text-gray-800">
         Datos del Envio
       </h2>
@@ -46,6 +47,7 @@ const ShippingBuyer = ({ dataForm, handleInputChange }) => {
         onChange={handleInputChange}
         className="px-4 py-3.5 text-center bg-white text-gray-800 w-full text-sm border-b-2 focus:border-gray-800 outline-none"
       />
+      
     </>
   );
 };

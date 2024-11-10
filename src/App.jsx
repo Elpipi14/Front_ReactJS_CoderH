@@ -13,12 +13,6 @@ import Register from './component/Users/Register/RegisterUser'
 import CheckOut from './component/CheckOut/CheckOut';
 import Footer from './component/Footer/Footer';
 
-
-
-// import Swal from 'sweetalert2';
-// import {useEffect, useState } from 'react';
-
-
 function App() {
   return (
     <>

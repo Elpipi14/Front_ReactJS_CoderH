@@ -6,19 +6,15 @@ import PaymentBuyer from "./BuyerForm/PaymentBuyer";
 import ShippingBuyer from "./BuyerForm/ShippingBuyer";
 
 const FormBuyer = ({ dataForm, handleInputChange, handleSubmitForm }) => {
-  // Cambia el estado de terms para abrir/cerrar los términos y condiciones
+  
   const [terms, setTerms] = useState(false);
   const toggleTerms = () => setTerms((prev) => !prev);
-
-  // const handleInputChange = (event) => {
-  //   setPayment({ ...payment, [event.target.name]: event.target.value });
-  // };
 
   return (
     <div>
       <form onSubmit={handleSubmitForm}>
         <ShippingBuyer
-          dataForm={dataForm} // Asegúrate de que esta línea esté incluida
+          dataForm={dataForm}
           handleInputChange={handleInputChange}
         />
 
@@ -47,7 +43,6 @@ const FormBuyer = ({ dataForm, handleInputChange, handleSubmitForm }) => {
               Términos y Condiciones
             </button>
           </label>
-          {/* Muestra el componente de Términos y Condiciones cuando terms es true */}
           {terms && <TermsAndConditions onClose={() => setTerms(false)} />}
         </div>
 
@@ -74,6 +69,7 @@ const FormBuyer = ({ dataForm, handleInputChange, handleSubmitForm }) => {
           </button>
         </div>
       </form>
+
       <div className="flex items-center mt-3 ">
         <h2 className="text-xl p-4 font-extrabold text-gray-800">
           Métodos de Pago

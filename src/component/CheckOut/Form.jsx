@@ -33,7 +33,7 @@ const FormCheck = ({ cart, getTotal }) => {
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
-    console.log(order);
+    // console.log(order);
   };
 
   return (

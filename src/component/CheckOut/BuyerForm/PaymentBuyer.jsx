@@ -4,6 +4,7 @@ import "react-credit-cards-2/dist/es/styles-compiled.css";
 const PaymentBuyer = ({ dataForm, handleInputChange }) => {
   return (
     <>
+
       <h2 className="text-2xl my-4 p-2  text-center font-extrabold text-gray-800">
         Datos de pago
       </h2>
@@ -51,6 +52,7 @@ const PaymentBuyer = ({ dataForm, handleInputChange }) => {
           className="px-4 text-center py-3.5 bg-white text-gray-800 w-full text-sm border-b-2 focus:border-gray-800 outline-none"
         />
       </div>
+      
     </>
   );
 };
