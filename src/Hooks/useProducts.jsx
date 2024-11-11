@@ -18,12 +18,19 @@ export const useProducts = () => {
   const [spinners, setSpinners] = useState(true);
 
   useEffect(() => {
-    setSpinners(true);
+    const fetchProducts = async () => {
+      setSpinners(true);
+      try {
+        const data = await getProducts();
+        setProducts(data);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setSpinners(false);
+      }
+    };
 
-    getProducts()
-      .then((data) => setProducts(data))
-      .catch((error) => console.error(error))
-      .finally(() => setSpinners(false));
+    fetchProducts();
   }, []);
 
   return { products, spinners };
@@ -35,15 +42,20 @@ export const useProductsId = (id) => {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    setSpinners(true);
-
-    getProducts()
-      .then((data) => {
+    const fetchProductById = async () => {
+      setSpinners(true);
+      try {
+        const data = await getProducts();
         const findProduct = data.find((product) => product.id === id);
         setProduct(findProduct);
-      })
-      .catch((error) => console.error(error))
-      .finally(() => setSpinners(false));
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setSpinners(false);
+      }
+    };
+
+    fetchProductById();
   }, [id]);
 
   return { product, spinners };
