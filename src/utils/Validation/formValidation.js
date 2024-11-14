@@ -24,7 +24,6 @@ const formSchema = object({
     .matches(/^[0-9]{16}$/, "El número de la tarjeta debe tener 16 dígitos")
     .required("El número de la tarjeta es requerido"),
   expiry: string()
-    .matches(/^(0[1-9]|1[0-2])\/?([0-9]{2})$/, "El formato debe ser MM/YY")
     .required("La fecha de vencimiento es requerida"),
   cvc: string()
     .matches(/^[0-9]{3,4}$/, "El CVC debe tener 3 o 4 dígitos")
