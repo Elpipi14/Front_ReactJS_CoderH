@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Timestamp, addDoc, collection } from "firebase/firestore";
 import db from "../../Service/FireBaseDB";
+import completeFormSchema from "../../utils/Validation/formValidation.js";
+import Swal from "sweetalert2"; // Importa SweetAlert2
 
 import FormBuyer from "./FormBuyer";
 import OrderBuyer from "./BuyerForm/OrderBuyer";
@@ -30,26 +32,43 @@ const FormCheck = ({ cart, getTotal, removeCart }) => {
     setDataForm({ ...dataForm, [event.target.name]: event.target.value });
   };
 
-  const handleSubmitForm = (e) => {
+  const handleSubmitForm = async (e) => {
     e.preventDefault();
 
-    const order = {
-      buyer: { ...dataForm },
-      products: cartItems,
-      total: getTotal(),
-    };
+    try {
+      const response = await completeFormSchema(dataForm);
 
-    upLoadOrder(order);
+      if (response.status === "error") {
+        // Muestra los errores con SweetAlert2
+        Swal.fire({
+          icon: "error",
+          title: "Errores de validación",
+          html: response.message.map((msg) => `<p>${msg}</p>`).join(""), // Muestra cada mensaje en una línea
+        });
+        return; // Detiene la ejecución si hay errores de validación
+      }
+
+      const order = {
+        buyer: { ...dataForm },
+        products: cartItems,
+        total: getTotal(),
+      };
+
+      await upLoadOrder(order);
+    } catch (error) {
+      console.log("Error al procesar la orden:", error);
+    }
   };
 
-  const upLoadOrder = (newOrder) => {
-    const orderRef = collection(db, "orders");
-    addDoc(orderRef, newOrder)
-    .then((res) => setIdOrder(res.id))
-    .catch((error)=>console.log(error))
-    .finally (()=>{
-      removeCart()
-    })
+  const upLoadOrder = async (newOrder) => {
+    try {
+      const orderRef = collection(db, "orders");
+      const data = await addDoc(orderRef, newOrder);
+      setIdOrder(data.id); // Guarda el ID de la orden generada
+      removeCart(); // Limpia el carrito solo si la orden fue exitosa
+    } catch (error) {
+      console.log("Error al subir la orden:", error);
+    }
   };
 
   return (
