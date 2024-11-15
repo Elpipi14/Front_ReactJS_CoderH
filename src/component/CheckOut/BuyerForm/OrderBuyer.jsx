@@ -16,6 +16,7 @@ const OrderBuyer = ({idOrder}) => {
         <div className="flex justify-center">
           <Link
             to="/"
+            onClick={() => window.scrollTo(0, 0)}
             className="min-w-[150px] font-semibold px-6 py-3 text-white bg-custom-gree-2 rounded-full shadow-md hover:bg-green-400 transition duration-300"
           >
             ⬅️ Volver a inicio

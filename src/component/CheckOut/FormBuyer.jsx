@@ -49,6 +49,7 @@ const FormBuyer = ({ dataForm, handleInputChange, handleSubmitForm }) => {
         <div className="flex flex-col items-center sm:flex-row sm:flex-wrap gap-4 mt-8">
           <Link to="/">
             <button
+            onClick={() => window.scrollTo(0, 0)}
               type="button"
               className="min-w-[150px] px-6 py-3.5 text-sm bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200"
             >
@@ -56,6 +57,7 @@ const FormBuyer = ({ dataForm, handleInputChange, handleSubmitForm }) => {
             </button>
           </Link>
           <button
+          onClick={() => window.scrollTo(0, 0)}
             type="submit"
             className="min-w-[150px] px-6 py-3.5 text-sm bg-gray-800 text-white rounded-md hover:bg-[#111]"
           >
