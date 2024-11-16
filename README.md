@@ -105,13 +105,21 @@ Analiza el código en busca de problemas.
         
         env:
         
-        `VITE_API_KEY=tu_api_key` 
-        `VITE_AUTH_DOMAIN=ecommerce-60060-163c7.firebaseapp.com`
-        `VITE_PROJECT_ID=ecommerce-60060-163c7`
-        `VITE_STORAGE_BUCKET=ecommerce-60060-163c7.appspot.com`
-        `VITE_MESSAGING_SENDER_ID=947114640839`
-        `VITE_APP_ID=1:947114640839:web:cf5c2a7b76528ed81445e2`
-        `API_KEY_LOADPRODUCTS=tu_api_key_carga` 
+        # Configuración de Firebase
+        `VITE_API_KEY=your_api_key_here`
+
+        `VITE_AUTH_DOMAIN=your_auth_domain_here`
+
+        `VITE_PROJECT_ID=your_project_id_here`
+
+        `VITE_STORAGE_BUCKET=your_storage_bucket_here`
+
+        `VITE_MESSAGING_SENDER_ID=your_messaging_sender_id_here`
+
+        `VITE_APP_ID=your_app_id_here`
+        
+        # Clave adicional para Node.js (cargar productos)
+        `API_KEY_LOADPRODUCTS=your_load_products_key_here`
         
 5.  **Inicia el servidor de desarrollo:**
     
