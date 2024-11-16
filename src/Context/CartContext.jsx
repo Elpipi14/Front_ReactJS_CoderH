@@ -133,4 +133,4 @@ const CartProvider = ({ children }) => {
   );
 };
 
-export { CartProvider, CartContext };
+export { CartProvider, CartContext }
