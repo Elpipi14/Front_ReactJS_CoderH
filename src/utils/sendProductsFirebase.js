@@ -1,7 +1,5 @@
 import db from "./dbproducts/db.js"
 import { addDoc, collection } from "firebase/firestore";
-import dotenv from 'dotenv';
-dotenv.config();
 
 const products = [
     {
