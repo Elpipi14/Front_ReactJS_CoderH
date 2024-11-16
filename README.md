@@ -17,31 +17,22 @@ El desarrollo se enfocó principalmente en el **frontend**, con el uso de **Fire
 
 ### Frameworks y Librerías
 
-Herramienta
-
-Descripción
-
 **React.js**
-
 Framework principal para interfaces reactivas.
 
 **React Router DOM**
-
 Gestión de rutas y navegación fluida.
 
 **SweetAlert2**
-
 Alertas interactivas y estilizadas.
 
 **React Credit Cards**
-
 Manejo de formularios de tarjetas de crédito.
 
 **Yup**
-
 Validación de formularios eficiente.
 
-### 🖌️ **Estilizado**
+### 🖌️ **Estilizado**:
 
 -   **Tailwind CSS:** Framework para estilos minimalistas y responsivos.
 -   **Autoprefixer:** Automatización de prefijos CSS para compatibilidad en navegadores.
@@ -98,29 +89,33 @@ Analiza el código en busca de problemas.
     bash
     `git clone https://github.com/tu-usuario/la-variete-shop.git` 
     
-3.  **Accede al directorio del proyecto:**
+2.  **Accede al directorio del proyecto:**
     
     bash
     `cd la-variete-shop` 
     
-4.  **Instala las dependencias:**
+3.  **Instala las dependencias:**
     
     bash
     `npm install` 
     
-5.  **Configura las variables de entorno:**
+4.  **Configura las variables de entorno:**
     
     -   Crea un archivo `.env` en la raíz del proyecto y añade tus credenciales:
         
-        bash
-        `VITE_FIREBASE_API_KEY=your_api_key  
-        VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain  
-        VITE_FIREBASE_PROJECT_ID=your_project_id` 
+        env:
         
-6.  **Inicia el servidor de desarrollo:**
+        `VITE_API_KEY=tu_api_key
+        VITE_AUTH_DOMAIN=ecommerce-60060-163c7.firebaseapp.com
+        VITE_PROJECT_ID=ecommerce-60060-163c7
+        VITE_STORAGE_BUCKET=ecommerce-60060-163c7.appspot.com
+        VITE_MESSAGING_SENDER_ID=947114640839
+        VITE_APP_ID=1:947114640839:web:cf5c2a7b76528ed81445e2
+        API_KEY_LOADPRODUCTS=tu_api_key_carga` 
+        
+5.  **Inicia el servidor de desarrollo:**
     
     bash
-
     `npm run dev` 
     
 
@@ -130,19 +125,10 @@ Analiza el código en busca de problemas.
 
 ### Página Principal
 
-### Categorías
+_Añade aquí capturas de pantalla o GIFs mostrando las principales características de tu aplicación._
 
 ----------
 
-## 💻 **Contribuciones**
-
-¡Las contribuciones son bienvenidas! 🚀
-
-1.  Haz un fork del proyecto.
-2.  Crea una rama para tu funcionalidad (`git checkout -b feature/nueva-funcionalidad`).
-3.  Realiza un Pull Request.
-
-----------
 
 ## 🎨 **Diseño Minimalista y Responsivo**
 
