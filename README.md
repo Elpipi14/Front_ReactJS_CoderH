@@ -105,13 +105,13 @@ Analiza el código en busca de problemas.
         
         env:
         
-        `VITE_API_KEY=tu_api_key
-        VITE_AUTH_DOMAIN=ecommerce-60060-163c7.firebaseapp.com
-        VITE_PROJECT_ID=ecommerce-60060-163c7
-        VITE_STORAGE_BUCKET=ecommerce-60060-163c7.appspot.com
-        VITE_MESSAGING_SENDER_ID=947114640839
-        VITE_APP_ID=1:947114640839:web:cf5c2a7b76528ed81445e2
-        API_KEY_LOADPRODUCTS=tu_api_key_carga` 
+        `VITE_API_KEY=tu_api_key` 
+        `VITE_AUTH_DOMAIN=ecommerce-60060-163c7.firebaseapp.com`
+        `VITE_PROJECT_ID=ecommerce-60060-163c7`
+        `VITE_STORAGE_BUCKET=ecommerce-60060-163c7.appspot.com`
+        `VITE_MESSAGING_SENDER_ID=947114640839`
+        `VITE_APP_ID=1:947114640839:web:cf5c2a7b76528ed81445e2`
+        `API_KEY_LOADPRODUCTS=tu_api_key_carga` 
         
 5.  **Inicia el servidor de desarrollo:**
     
@@ -120,15 +120,6 @@ Analiza el código en busca de problemas.
     
 
 ----------
-
-## ✨ **Vista Previa**
-
-### Página Principal
-
-_Añade aquí capturas de pantalla o GIFs mostrando las principales características de tu aplicación._
-
-----------
-
 
 ## 🎨 **Diseño Minimalista y Responsivo**
 
