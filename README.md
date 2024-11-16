@@ -96,45 +96,31 @@ Analiza el código en busca de problemas.
 1.  **Clona el repositorio:**
     
     bash
-    
-    Copiar código
-    
     `git clone https://github.com/tu-usuario/la-variete-shop.git` 
     
-2.  **Accede al directorio del proyecto:**
+3.  **Accede al directorio del proyecto:**
     
     bash
-    
-    Copiar código
-    
     `cd la-variete-shop` 
     
-3.  **Instala las dependencias:**
+4.  **Instala las dependencias:**
     
     bash
-    
-    Copiar código
-    
     `npm install` 
     
-4.  **Configura las variables de entorno:**
+5.  **Configura las variables de entorno:**
     
     -   Crea un archivo `.env` en la raíz del proyecto y añade tus credenciales:
         
         bash
-        
-        Copiar código
-        
         `VITE_FIREBASE_API_KEY=your_api_key  
         VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain  
         VITE_FIREBASE_PROJECT_ID=your_project_id` 
         
-5.  **Inicia el servidor de desarrollo:**
+6.  **Inicia el servidor de desarrollo:**
     
     bash
-    
-    Copiar código
-    
+
     `npm run dev` 
     
 
