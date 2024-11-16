@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { CartContext } from "../../Context/cartContext";
+import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 
 const Cart = ({ closeMenu, closeNavBar }) => {

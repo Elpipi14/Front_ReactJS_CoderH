@@ -1,6 +1,6 @@
 // import ItemList from "./ItemList";
 import { Link } from "react-router-dom";
-import FilterHocProducts from "../../Hoc/HocFilterProducts";
+import FilterHocProducts from "../../hoc/HocFilterProducts";
 
 const ItemListContainer = ({ products }) => {
   return (

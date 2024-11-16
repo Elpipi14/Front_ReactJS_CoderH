@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useProducts } from "../Hooks/useProducts";
+import { useProducts } from "../hooks/useProducts";
 import { Link, useParams, useNavigate } from "react-router-dom";
 
 import Spinner from "../component/Spinner/Spinner";

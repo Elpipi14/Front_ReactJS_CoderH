@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
-import db from "../Service/FireBaseDB";
+import db from "../service/FireBaseDB";
 
 // Obtenemos los productos de Firestore y devolvemos una promesa
 const getProducts = async () => {

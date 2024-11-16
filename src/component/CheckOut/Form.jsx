@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Timestamp, addDoc, collection, doc, setDoc } from "firebase/firestore";
-import db from "../../Service/FireBaseDB.js";
-import completeFormSchema from "../../Utils/Validation/formValidation.js";
+import db from "../../service/FireBaseDB.js";
+import completeFormSchema from "../../utils/Validation/formValidation.js";
 import Swal from "sweetalert2"; // Importa SweetAlert2
 
 import FormBuyer from "./FormBuyer.jsx";

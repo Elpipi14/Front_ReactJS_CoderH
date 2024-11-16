@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CartContext } from "../../Context/cartContext";
+import { CartContext } from "../../context/CartContext";
 import FormCheck from "./Form";
 
 const CheckOut = () => {
